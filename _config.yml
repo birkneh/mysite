@@ -1,0 +1,11 @@
+title: "Birkneh T. Tadesse, MD, PhD"
+description: "Global health epidemiologist and vaccine research leader"
+email: "birknehtilahun@gmail.com"
+baseurl: ""
+url: ""
+timezone: "Asia/Seoul"
+markdown: kramdown
+permalink: /writing/:title/
+author:
+  name: "Birkneh T. Tadesse"
+  title: "Associate Director General, International Vaccine Institute"

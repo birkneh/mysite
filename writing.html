@@ -1,0 +1,24 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<section class="page-intro">
+  <p class="kicker">Writing</p>
+  <h1>Notes on vaccines, global health, and implementation science</h1>
+  <p>
+    This page gathers essays, policy reflections, and field notes. New posts can be added by creating
+    Markdown files in the <code>_posts/</code> folder.
+  </p>
+</section>
+
+<section class="post-feed">
+  {% for post in site.posts %}
+    <article class="post-card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      <p>{{ post.excerpt | strip_html | truncatewords: 34 }}</p>
+      <a class="read-more" href="{{ post.url | relative_url }}">Read article</a>
+    </article>
+  {% endfor %}
+</section>
