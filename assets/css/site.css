@@ -349,6 +349,50 @@ h3 {
   background: #fffdf8;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.project-grid-compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: #fffdf8;
+}
+
+.project-card h3 {
+  font-size: 1.24rem;
+  margin-bottom: 0.28rem;
+}
+
+.project-card h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.project-card h3 a:hover,
+.project-card h3 a:focus-visible {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-card p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-muted);
+}
+
+.project-meta {
+  font-weight: 700;
+  color: #5c6f74;
+}
+
 .section-title-row {
   display: flex;
   align-items: baseline;
@@ -619,7 +663,9 @@ h3 {
   }
 
   .pillars,
-  .research-cards {
+  .research-cards,
+  .project-grid,
+  .project-grid-compact {
     grid-template-columns: 1fr;
   }
 }
