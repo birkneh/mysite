@@ -1,57 +1,31 @@
-# Birkneh T. Tadesse Website (GitHub Pages + Blog)
+# Birkneh T. Tadesse Website
 
-This repository is configured as a **Jekyll** site for GitHub Pages.
+This is now a **fully static GitHub Pages site** (no Jekyll build required).
 
 ## Structure
-- `index.html`: Homepage (profile + advocacy positioning + latest writing)
-- `writing.html`: Blog index page
-- `_posts/`: Blog posts in Markdown
-- `_layouts/`: Reusable page templates
+- `index.html`: Home/profile page
 - `assets/css/site.css`: Main styling
+- `assets/images/profile.jpg`: Profile image
+- `writing/index.html`: Blog listing page
+- `writing/*.html`: Individual blog posts
 - `Tadesse_CV_4FEB26.pdf`: Downloadable CV
+- `.nojekyll`: Forces GitHub Pages to serve static files directly
 
-## Deploy to GitHub Pages
-1. Push this repository to GitHub.
-2. Open your repository on GitHub.
-3. Go to `Settings` -> `Pages`.
-4. Under **Build and deployment**:
+## Deploy
+1. Push to GitHub.
+2. In repo `Settings` -> `Pages`:
    - Source: `Deploy from a branch`
-   - Branch: your default branch (usually `main`)
+   - Branch: `main`
    - Folder: `/ (root)`
-5. Save.
-6. GitHub will publish the site at:
-   - `https://<your-username>.github.io/<repo-name>/`
+3. Wait 1-2 minutes.
 
-## Important for project pages
-This repository is currently configured for:
-- `url: https://birkneh.github.io`
-- `baseurl: /NEWsite`
-
-If you change the repository name, update `baseurl` in `/Users/Administrator/Documents/New project/_config.yml` to match exactly.
+Live URL:
+- `https://birkneh.github.io/NEWsite/`
 
 ## Add a new blog post
-1. Create a new file in `_posts/` using this format:
-   - `YYYY-MM-DD-your-title.md`
-2. Add front matter at the top:
-
-```md
----
-layout: post
-title: "Your post title"
----
-Your content goes here.
-```
-
-3. Commit and push. GitHub Pages rebuilds automatically.
-
-## Local preview (optional)
-If you want to preview exactly how GitHub Pages will render the site:
-
-1. Install Ruby and Bundler.
-2. Install Jekyll: `gem install jekyll bundler`.
-3. From this repository, run: `jekyll serve`.
-4. Open `http://127.0.0.1:4000`.
-
-## Optional: user site URL
-If your repo is named `<your-username>.github.io`, your site URL becomes:
-- `https://<your-username>.github.io/`
+1. Copy one existing file in `writing/` and rename it, for example:
+   - `writing/my-new-post.html`
+2. Update the title, date, and content in that file.
+3. Add a new card link inside `writing/index.html`.
+4. Add the same link to the "Latest Writing" section in `index.html`.
+5. Commit and push.
