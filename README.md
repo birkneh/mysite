@@ -8,6 +8,7 @@ This is now a **fully static GitHub Pages site** (no Jekyll build required).
 - `assets/images/profile.jpg`: Profile image
 - `writing/index.html`: Blog listing page
 - `writing/*.html`: Individual blog posts
+- `publications/index.html`: PubMed publications page
 - `Tadesse_CV_4FEB26.pdf`: Downloadable CV
 - `.nojekyll`: Forces GitHub Pages to serve static files directly
 
@@ -29,3 +30,10 @@ Live URL:
 3. Add a new card link inside `writing/index.html`.
 4. Add the same link to the "Latest Writing" section in `index.html`.
 5. Commit and push.
+
+## Update publications from PubMed
+1. Open your PubMed query:
+   - `https://pubmed.ncbi.nlm.nih.gov/?term=birkneh+tadesse+or+birkneh+tilahun&sort=date`
+2. Update entries in `publications/index.html`.
+3. Update the short \"Recent Publications\" list in `index.html`.
+4. Commit and push.
