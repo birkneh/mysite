@@ -85,18 +85,19 @@ body {
 
 .brand a::before {
   content: "BT";
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 2.1rem;
+  height: 2.1rem;
   display: inline-grid;
   place-items: center;
-  border-radius: 0.42rem;
-  background: linear-gradient(145deg, #2f7f86 0%, #1f6067 55%, #17484f 100%);
-  color: #ffffff;
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  box-shadow: 0 6px 14px rgba(20, 46, 50, 0.24);
+  border-radius: 0;
+  background: transparent;
+  border: 2px solid #111111;
+  color: #111111;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 .site-nav {
