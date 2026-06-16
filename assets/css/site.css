@@ -292,8 +292,9 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center 30%;
   border-radius: 15px;
   border: 1px solid #d8ccb8;
   box-shadow: 0 8px 22px rgba(20, 27, 27, 0.16);
