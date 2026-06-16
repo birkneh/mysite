@@ -6,12 +6,55 @@
     return;
   }
 
-  if (!window.Plotly) {
-    if (infoEl) {
-      infoEl.textContent = 'Interactive map could not load. Please refresh the page.';
+  var PLOTLY_SRC = 'https://cdn.plot.ly/plotly-2.35.2.min.js';
+  var rendered = false;
+
+  // Load the heavy Plotly library on demand, then render the map once.
+  function ensurePlotly() {
+    if (rendered) {
+      return;
     }
-    return;
+    rendered = true;
+
+    if (window.Plotly) {
+      renderMap();
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.src = PLOTLY_SRC;
+    script.async = true;
+    script.onload = renderMap;
+    script.onerror = function () {
+      if (infoEl) {
+        infoEl.textContent = 'Interactive map could not load. Please check your connection and refresh.';
+      }
+    };
+    document.head.appendChild(script);
   }
+
+  // Defer loading until the map is about to enter the viewport.
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          ensurePlotly();
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    observer.observe(mapEl);
+  } else {
+    ensurePlotly();
+  }
+
+  function renderMap() {
+    if (!window.Plotly) {
+      if (infoEl) {
+        infoEl.textContent = 'Interactive map could not load. Please refresh the page.';
+      }
+      return;
+    }
 
   var lifeData = [
     { iso3: 'DZA', country: 'Algeria', value: 76.89 },
@@ -126,4 +169,5 @@
       infoEl.textContent = point.text + ': ' + Number(point.z).toFixed(2) + ' years (Worldometer).';
     });
   });
+  }
 })();
