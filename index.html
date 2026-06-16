@@ -64,6 +64,15 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
+  <div class="announcement" id="announcement" hidden>
+    <p>
+      <span class="announcement-tag">New</span>
+      New paper in <em>npj Vaccines</em>: SchistoShield&reg; schistosomiasis vaccine induces functional immune memory in US and African populations.
+      <a href="writing/schistoshield-schistosomiasis-vaccine-immune-memory.html">Read the highlight &rarr;</a>
+    </p>
+    <button type="button" class="announcement-close" id="announcement-close" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
   <header class="site-header">
     <div class="header-inner">
       <p class="brand"><a href="./">Birkneh T. Tadesse, MD, PhD</a></p>
@@ -261,6 +270,12 @@
 
       <div class="post-feed">
         <article class="post-card link-card">
+          <h3><a href="writing/schistoshield-schistosomiasis-vaccine-immune-memory.html">New in npj Vaccines: SchistoShield&reg; schistosomiasis vaccine induces functional immune memory across US and African populations</a></h3>
+          <time datetime="2026-06-02">June 2, 2026</time>
+          <p>A new co-authored study in npj Vaccines reports that the SchistoShield&reg; (Sm-p80 + GLA-SE) candidate elicits functional immune memory in both US and African populations.</p>
+          <a class="read-more" href="writing/schistoshield-schistosomiasis-vaccine-immune-memory.html">Read article</a>
+        </article>
+        <article class="post-card link-card">
           <h3><a href="writing/pandemic-lesson-vaccines-worked-equity-did-not.html">The Pandemic Lesson We Cannot Ignore: Vaccines Worked &mdash; Equity Did Not</a></h3>
           <time datetime="2026-02-20">February 20, 2026</time>
           <p>A global analysis shows the core pandemic lesson: vaccine science moved quickly, but equitable access and local evidence did not.</p>
@@ -287,6 +302,7 @@
         <a href="publications/">View all publications</a>
       </div>
       <div class="pub-mini">
+        <p><a href="https://www.nature.com/articles/s41541-026-01501-0" target="_blank" rel="noopener">Schistosomiasis vaccine SchistoShield&reg; induces functional immune memory responses in US and African populations <span>(npj Vaccines, 2026)</span></a></p>
         <p><a href="https://pubmed.ncbi.nlm.nih.gov/41429348/" target="_blank" rel="noopener">Efficacy of susceptibility-matched antibiotic treatment of nontyphoidal Salmonella bloodstream infections <span>(2025)</span></a></p>
         <p><a href="https://pubmed.ncbi.nlm.nih.gov/41076059/" target="_blank" rel="noopener">Increased risk of neuropsychiatric adverse events with dolutegravir-based ART during pregnancy <span>(2025)</span></a></p>
         <p><a href="https://pubmed.ncbi.nlm.nih.gov/40961798/" target="_blank" rel="noopener">Longevity of immune-response after one dose of vi-DT vaccine in adults and children <span>(2025)</span></a></p>
@@ -312,6 +328,25 @@
       <p><a href="Tadesse_CV_4FEB26.pdf" target="_blank" rel="noopener">Curriculum Vitae</a></p>
     </div>
   </footer>
+  <script>
+    (function () {
+      var KEY = 'announce-schistoshield-dismissed';
+      var bar = document.getElementById('announcement');
+      var close = document.getElementById('announcement-close');
+      if (!bar) { return; }
+      try {
+        if (localStorage.getItem(KEY) !== '1') { bar.hidden = false; }
+      } catch (e) {
+        bar.hidden = false;
+      }
+      if (close) {
+        close.addEventListener('click', function () {
+          bar.hidden = true;
+          try { localStorage.setItem(KEY, '1'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
   <script src="assets/js/africa-life-map.js" defer></script>
 </body>
 </html>

@@ -44,6 +44,69 @@ body {
   padding: 0.4rem 0.7rem;
 }
 
+.announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(120deg, var(--accent-deep) 0%, var(--accent) 100%);
+  color: #f4faf9;
+}
+
+.announcement[hidden] {
+  display: none;
+}
+
+.announcement p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.announcement-tag {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.08rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.announcement a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.announcement-close {
+  flex: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.announcement-close:hover,
+.announcement-close:focus-visible {
+  background: rgba(255, 255, 255, 0.32);
+}
+
 .site-header {
   position: sticky;
   top: 0;
