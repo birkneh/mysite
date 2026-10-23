@@ -24,7 +24,7 @@
 ## Styling and Assets
 - Main CSS: `/Users/Administrator/Documents/New project/assets/css/site.css`
 - Profile image: `/Users/Administrator/Documents/New project/assets/images/profile.jpg`
-- CV file: `/Users/Administrator/Documents/New project/Tadesse_CV_4FEB26.pdf`
+- CV file: `/Users/Administrator/Documents/New project/Tadesse_CV.pdf`
 
 ## Revisit Workflow
 1. Open this workspace in Codex.

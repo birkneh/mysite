@@ -548,6 +548,10 @@ h3 {
   padding: 0.16rem 0.45rem;
 }
 
+.link-card > h3 {
+  padding-right: 3.6rem; /* keep titles clear of the "Open" badge */
+}
+
 .link-card:hover,
 .link-card:focus-within {
   transform: translateY(-5px) scale(1.01);
@@ -838,6 +842,13 @@ h3 {
 
 .footer-inner p {
   margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .footer-inner a {
