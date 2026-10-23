@@ -11,7 +11,7 @@ This is now a **fully static GitHub Pages site** (no Jekyll build required).
 - `writing/*.html`: Individual blog posts
 - `projects/index.html`: Projects page
 - `publications/index.html`: PubMed publications page
-- `Tadesse_CV_4FEB26.pdf`: Downloadable CV
+- `Tadesse_CV.pdf`: Downloadable CV
 - `.nojekyll`: Forces GitHub Pages to serve static files directly
 
 ## Deploy
