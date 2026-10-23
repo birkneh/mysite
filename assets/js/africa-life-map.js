@@ -120,10 +120,10 @@
     z: lifeData.map(function (d) { return d.value; }),
     text: lifeData.map(function (d) { return d.country; }),
     colorscale: [
-      [0.0, '#f3ece2'],
-      [0.35, '#dcbf93'],
-      [0.65, '#95c8cc'],
-      [1.0, '#2f7f86']
+      [0.0, '#f7e7c4'],
+      [0.35, '#e8a93a'],
+      [0.65, '#4f8a9b'],
+      [1.0, '#0f3d4c']
     ],
     marker: {
       line: {
@@ -151,7 +151,7 @@
       showframe: false,
       showcoastlines: false,
       showland: true,
-      landcolor: '#ece8df',
+      landcolor: '#eaefee',
       bgcolor: 'rgba(0,0,0,0)'
     }
   };
